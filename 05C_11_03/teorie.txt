@@ -1,0 +1,5 @@
+Variante parcurgere graf:
+
+	-Recursiv (DFS - parcurgere in adancime)
+	-Fll (BFS - parcurgere in latime)
+

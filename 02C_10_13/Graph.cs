@@ -21,16 +21,16 @@ namespace _02C_10_13
 
         public void LoadFromFile(string filename)
         {
-            TextReader reader = new StreamReader(filename);
-            int n = int.Parse(reader.ReadLine());
+            TextReader load = new StreamReader(filename);
+            int n = int.Parse(load.ReadLine());
             string buffer;
             for (int i = 0; i < n; i++)
             {
-                buffer = reader.ReadLine();
+                buffer = load.ReadLine();
                 Vertex local = new Vertex(buffer);
                 Vertices.Add(local);
             }
-            while ((buffer = reader.ReadLine()) != null)
+            while ((buffer = load.ReadLine()) != null)
             {
                 Edge edge = new Edge(buffer);
                 Edges.Add(edge);

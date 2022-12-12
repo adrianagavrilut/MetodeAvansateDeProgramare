@@ -1,0 +1,10 @@
+curs07:
+	->Detect Cycle
+	-Kruskal, Prim
+curs08:
+	-MST/ ACM
+	-Arbore de cost minim
+	-Arborele nu are cicluri
+
+-folosim functia de DetectCycle de la cursul trecut
+https://en.wikipedia.org/wiki/Kruskal%27s_algorithm#/media/File:KruskalDemo.gif

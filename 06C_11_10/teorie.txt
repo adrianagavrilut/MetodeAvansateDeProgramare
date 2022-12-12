@@ -1,0 +1,10 @@
+curs05: 
+Variante parcurgere graf:
+	-Recursiv (DFS - parcurgere in adancime)
+	-Fll (BFS - parcurgere in latime)
+curs06:
+	->Alg. lui Dijkstra - Drumul minim pentru tot graful
+	Algoritmul lui Dijkstra este o metoda de a stabili drumul de cost minim de la un nod de start la oricare altul dintr-un graf. 
+	-> Drum hamiltonian
+next week: Kruskal si alg lui prim?
+

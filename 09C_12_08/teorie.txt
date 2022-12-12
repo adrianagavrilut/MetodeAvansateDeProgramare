@@ -1,0 +1,12 @@
+curs08:
+	-MST/ ACM
+	-Arbore de cost minim
+	-Arborele nu are cicluri
+
+-folosim functia de DetectCycle de la cursul trecut
+https://en.wikipedia.org/wiki/Kruskal%27s_algorithm#/media/File:KruskalDemo.gif
+
+curs09:
+	-pb det daca exista drum intre doua noduri
+	-matrice de drumuri
+	-Alg Floyd-Roy-Marshall

@@ -1,0 +1,3 @@
+pb-exam: 
+1)Se dau 4 tije. Pe prima tija se afla n discuri in ordine crescatoare. Respectand conditiile pb turnurilor din Hanoi. Construiti solutia.
+2) Se da un vector sortat, trebuie cautat daca un element x se afla in vector.

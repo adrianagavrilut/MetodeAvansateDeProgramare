@@ -1,0 +1,7 @@
+
+next week: Kruskal si alg lui prim?
+
+curs07:
+	->Detect Cycle
+	-Kruskal, Prim
+
