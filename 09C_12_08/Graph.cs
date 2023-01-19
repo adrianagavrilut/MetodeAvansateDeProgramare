@@ -20,32 +20,30 @@ namespace _09C_12_08
 
         public void LoadFromFile(string filename)
         {
-            TextReader reader = new StreamReader(filename);
-            n = int.Parse(reader.ReadLine());
+            TextReader load = new StreamReader(filename);
+            n = int.Parse(load.ReadLine());
             matrixAd = new int[n + 1, n + 1];
             matrixDr = new int[n + 1, n + 1];
             string buffer;
-            while ((buffer = reader.ReadLine()) != null)
+            while ((buffer = load.ReadLine()) != null)
             {
                 string[] data = buffer.Split(' ');
                 int x = int.Parse(data[0]);
                 int y = int.Parse(data[1]);
                 matrixAd[x, y] = 1;
             }
-            reader.Close();
+            load.Close();
         }
 
         public List<string> View(int[,] a)
         {
             List<string> list = new List<string>();
             string buffer;
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 buffer = "";
                 for (int j = 1; j <= n; j++)
-                {
                     buffer += a[i, j];
-                }
                 list.Add(buffer);
             }
             return list;
@@ -54,28 +52,13 @@ namespace _09C_12_08
         public void RoyWarshall()
         {
             for (int i = 1; i <= n; i++)
-            {
                 for (int j = 1; j <= n; j++)
-                {
                     matrixDr[i, j] = matrixAd[i, j];
-                }
-            }
             for (int k = 1; k <= n; k++)
-            {
                 for (int i = 1; i <= n; i++)
-                {
                     for (int j = 1; j <= n; j++)
-                    {
-                        if (i != j)
-                        {
-                            if (matrixDr[i, j] == 0)
-                            {
-                                matrixDr[i, j] = matrixDr[i, k] * matrixDr[k, j];
-                            }
-                        }
-                    }
-                }
-            }
+                        if (i != j && matrixDr[i, j] == 0)
+                            matrixDr[i, j] = matrixDr[i, k] * matrixDr[k, j];       
         }
 
         public List<string> CTC()//componente tare conexe
@@ -96,8 +79,8 @@ namespace _09C_12_08
                     {
                         if (matrixDr[i,j] * matrixDr[j, i] == 1)
                         {
-                            p[j] = 1;
                             buffer += j + " ";
+                            p[j] = 1;
                         }
                     }
                     if (buffer != "")

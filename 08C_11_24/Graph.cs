@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
 
 namespace _08C_11_24
 {
-
     public class Graph
     {
         public List<Vertex> Vertices;
@@ -280,10 +275,8 @@ namespace _08C_11_24
                         CycleDetectUtils(i, b, nodStart);
                     }
                     else
-                    {
                         if (parent != i)
-                        return true;
-                    }
+                            return true;
                 }
             }
             return false;

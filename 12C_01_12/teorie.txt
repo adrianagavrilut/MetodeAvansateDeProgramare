@@ -1,0 +1,6 @@
+1. Se da o matrice de valori 0, 1. La fiecare etapa se reface matricea dupa urmatoarele reguli:
+	- daca o pozitie are un nr par de valori 1 vecini aceasta se va transforma in 0
+	- daca o pozitie are un nr impar de valori 1 vecini aceasta se va transforma in 1
+pasi:
+-citire matrice din fisier
+-functia Tick()

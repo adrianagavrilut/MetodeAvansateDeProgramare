@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _06C_11_10
@@ -23,7 +17,7 @@ namespace _06C_11_10
             Engine.demo = new Graph();
             Engine.demo.LoadFromFile(@"../../TextFile1.txt");
             Engine.demo.Color();
-            List<string> t = Engine.demo.View(listBox2);
+            Engine.demo.View(listBox2);
             Engine.demo.Draw(Engine.grp);
             Engine.Refresh();
         }
@@ -52,13 +46,10 @@ namespace _06C_11_10
 
         private void buttonDijkstra_Click(object sender, EventArgs e)
         {
-            string x = "";
             int nodStart = 1;
             float[] t = Engine.demo.Dijkstra(nodStart);
             for (int i = 0; i < Engine.demo.Vertices.Count; i++)
-            {
                 listBox1.Items.Add(nodStart + " --> " + i + ":  " + t[i]);
-            }
         }
 
         private void buttonHamilton_Click(object sender, EventArgs e)
@@ -67,9 +58,7 @@ namespace _06C_11_10
             string s = "";
             int[] t = Engine.demo.Hamilton(nodStart);
             for (int i = 0; i < Engine.demo.Vertices.Count; i++)
-            {
                 s += t[i] + " ";
-            }
             listBox1.Items.Add(s);
         }
     }

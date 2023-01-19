@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _08C_11_24
@@ -23,7 +17,7 @@ namespace _08C_11_24
             Engine.demo = new Graph();
             Engine.demo.LoadFromFile(@"../../TextFile1.txt");
             Engine.demo.Color();
-            List<string> t = Engine.demo.View(listBox2);
+            Engine.demo.View(listBox2);
             Engine.demo.Draw(Engine.grp);
             Engine.Refresh();
         }

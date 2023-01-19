@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace _02C_10_13
 {
     public class Edge
     {
-        Vertex start;
-        Vertex end;
+        public Vertex start;
+        public Vertex end;
 
         public Edge(string data)
         {

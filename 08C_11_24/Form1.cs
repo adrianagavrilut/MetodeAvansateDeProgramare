@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace _08C_11_24
@@ -23,9 +17,10 @@ namespace _08C_11_24
             Engine.demo = new Graph();
             Engine.demo.LoadFromFile(@"../../TextFile1.txt");
             Engine.demo.Color();
-            List<string> t = Engine.demo.View(listBox2);
+            Engine.demo.View(listBox2);
             Engine.demo.Draw(Engine.grp);
             Engine.Refresh();
+
             Engine.demo.Sort();
             foreach (Edge edge in Engine.demo.Edges)
                 listBox1.Items.Add(edge.ToString());
@@ -95,12 +90,10 @@ namespace _08C_11_24
                 Engine.ACM.AddEdge(Engine.demo.Edges[i]);
                 Engine.ACM.Calculus();
                 listBox2.Items.Add("\n");
-                List<string> t = Engine.ACM.View(listBox2);
+                Engine.ACM.View(listBox2);
 
                 if (Engine.ACM.CycleDetection(i))
-                {
                     Engine.ACM.RemoveEdge();
-                }
             }
             Engine.ACM.Draw(Engine.grp);
             Engine.Refresh();

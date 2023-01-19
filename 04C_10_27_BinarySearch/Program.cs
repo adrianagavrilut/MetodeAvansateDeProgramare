@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _04C_10_27_BinarySearch
 {
@@ -30,7 +26,45 @@ namespace _04C_10_27_BinarySearch
                 }
             } while (nUtilizator != nCalculator);
             Console.WriteLine($"Ai reusit din {cnt1} incercari");*/
-            int n = 10000, k = 10000, t = 5000;
+            /* int n = 10000, k = 10000, t = 5000;
+             int[] v = new int[n];
+             for (int i = 0; i < n; i++)
+             {
+                 v[i] = rnd.Next(k);
+             }
+             int[] x = new int[t]; //cautam elementele vect x in vectorul v
+             for (int i = 0; i < t; i++)
+             {
+                 x[i] = rnd.Next(k);
+             }
+             //found naiv
+             for (int i = 0; i < t; i++)
+             {
+                 Found(v, x[i]);
+             }
+             Console.WriteLine(cnt1);
+
+             //sortare
+             for (int i = 0; i < n - 1; i++)
+             {
+                 for (int j = i + 1; j < n; j++)
+                 {
+                     if (v[i] > v[j])
+                     {
+                         int aux = v[i];
+                         v[i] = v[j];
+                         v[j] = aux;
+                     }
+                 }
+             }
+
+             //bs
+             for (int i = 0; i < t; i++)
+             {
+                 Found(v, x[i], 0, v.Length - 1);
+             }
+             Console.WriteLine(cnt2 + 700000);*/
+            int n = 10, k = 10, t = 5;
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
@@ -41,33 +75,29 @@ namespace _04C_10_27_BinarySearch
             {
                 x[i] = rnd.Next(k);
             }
-            //found naiv
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(v[i] + " ");
+            }
+            Console.WriteLine();
             for (int i = 0; i < t; i++)
             {
-                Found(v, x[i]);
+                Console.Write(x[i] + " ");
             }
-            Console.WriteLine(cnt1);
-
-            //sortare
-            for (int i = 0; i < n - 1; i++)
-            {
-                for (int j = i + 1; j < n; j++)
-                {
-                    if (v[i] > v[j])
-                    {
-                        int aux = v[i];
-                        v[i] = v[j];
-                        v[j] = aux;
-                    }
-                }
-            }
-
-            //bs
+            Console.WriteLine();
+            int a = rnd.Next(n);
+            Console.WriteLine(a);/*
             for (int i = 0; i < t; i++)
             {
-                Found(v, x[i], 0, v.Length - 1);
-            }
-            Console.WriteLine(cnt2 + 700000);
+                if(Found(v, x[i], 0, v.Length - 1))
+                    Console.WriteLine(true);
+                else
+                    Console.WriteLine(false);
+            }*/
+            if (Found(v, a, 0, v.Length - 1))
+                Console.WriteLine(true);
+            else
+                Console.WriteLine(false);
         }
 
         //found DC - BinarySearch

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace _03C_10_20
 {
-
     public class Vertex
     {
         public string name;
@@ -36,6 +30,5 @@ namespace _03C_10_20
             h.DrawEllipse(Pens.Black, location.X - size, location.Y - size, 2 * size + 1, 2 * size + 1);
             h.DrawString(name, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.Blue), location.X, location.Y);
         }
-
     }
 }

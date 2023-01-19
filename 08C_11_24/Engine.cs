@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 namespace _08C_11_24
 {
-
     public static class Engine
     {
         public static Graphics grp;
@@ -11,7 +10,9 @@ namespace _08C_11_24
         public static PictureBox display;
         public static Color color = Color.BlanchedAlmond;
         public static Graph demo;
+
         public static Graph ACM;
+
         public static Color[] pall = new Color[] { Color.Red, Color.Blue, Color.Green, Color.Orange, Color.Orchid };
 
         public static void InitGraph(PictureBox t)

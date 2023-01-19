@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 
 namespace _08C_11_24
 {
-
     public class Graph
     {
         public List<Vertex> Vertices;
@@ -265,7 +260,7 @@ namespace _08C_11_24
                     }
                     else
                         if (parent != i)
-                        return true;
+                            return true;
                 }
             }
             return false;

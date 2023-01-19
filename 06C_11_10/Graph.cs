@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
 
 namespace _06C_11_10
 {
-
     public class Graph
     {
         public List<Vertex> Vertices;
         public List<Edge> Edges;
         public int[,] matrix;
-        public static float inf = 1e10f;
+        public static float inf = float.MaxValue;
 
         private List<int> toR;
 
@@ -177,9 +172,7 @@ namespace _06C_11_10
         {
             float[] dijkstra = new float[Vertices.Count];
             for (int i = 0; i < Vertices.Count; i++)
-            {
                 dijkstra[i] = inf;
-            }
             Queue A = new Queue();
             dijkstra[nodStart] = 0;
             A.Push(nodStart);
@@ -207,17 +200,11 @@ namespace _06C_11_10
             {
                 bool ok = true;
                 for (int i = 0; i < n - 1; i++)
-                {
                     if (matrix[s[i], s[i+1]] == 0)
                         ok = false;
-                }
                 if (ok)
-                {
                     for (int i = 0; i < n; i++)
-                    {
                         v[i] = s[i];
-                    }
-                }
             }
             else
             {

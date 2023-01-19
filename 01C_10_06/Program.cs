@@ -31,15 +31,14 @@ namespace _01C_10_06
                 }
                 Console.WriteLine();
             }
+
             int nrImpar = 0;
             for (int i = 0; i < n; i++)
             {
                 int s = 0;
                 for (int j = 0; j < n; j++)
-                {
                     if (matrix[i, j] == 1)
                         s++;
-                }
                 if (s % 2 == 1)
                     nrImpar++;
             }

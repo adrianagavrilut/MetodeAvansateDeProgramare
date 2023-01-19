@@ -23,7 +23,7 @@ namespace _05C_11_03
             Engine.demo = new Graph();
             Engine.demo.LoadFromFile(@"../../TextFile1.txt");
             Engine.demo.Color();
-            List<string> t = Engine.demo.View(listBox2);
+            Engine.demo.View(listBox2);
             Engine.demo.Draw(Engine.grp);
             Engine.Refresh();
         }
@@ -33,9 +33,7 @@ namespace _05C_11_03
             List<int> t = Engine.demo.BFS(3);
             string x = "";
             foreach (int i in t)
-            {
                 x += i + " ";
-            }
             listBox1.Items.Add(x);
         }
 
@@ -44,9 +42,7 @@ namespace _05C_11_03
             List<int> t = Engine.demo.DFS(3);
             string x = "";
             foreach (int i in t)
-            {
                 x += i + " ";
-            }
             listBox1.Items.Add(x);
         }
     }

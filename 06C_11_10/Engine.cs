@@ -3,7 +3,6 @@ using System.Windows.Forms;
 
 namespace _06C_11_10
 {
-
     public static class Engine
     {
         public static Graphics grp;

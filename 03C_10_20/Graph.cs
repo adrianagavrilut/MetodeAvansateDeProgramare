@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Drawing;
 
 namespace _03C_10_20
 {
-
     public class Graph
     {
         public List<Vertex> Vertices;
@@ -83,45 +78,24 @@ namespace _03C_10_20
             int n = Vertices.Count;
             int[] colors = new int[n];
             for (int i = 0; i < n; i++)
-            {
                 colors[i] = -1;
-            }
             colors[0] = 0;
-            bool[] lc = new bool[n];
+            bool[] b = new bool[n];
             for (int i = 1; i < n; i++)
             {
                 for (int j = 0; j < n; j++)
-                {
-                    lc[j] = false;
-                }
+                    b[j] = false;
                 for (int j = 0; j < n; j++)
-                {
                     if (matrix[i,j] != 0)
-                    {
                         if (colors[j] != -1)//nu am culoare setata
-                        {
-                            lc[colors[j]] = true;
-                        }
-                    }
-                }
+                            b[colors[j]] = true;
                 int idx = 0;
-                while (lc[idx])//gasim primul fals
-                {
+                while (b[idx])//gasim primul fals
                     idx++;
-                }
                 colors[i] = idx;
             }
-            /*string t = "";
             for (int i = 0; i < n; i++)
-            {
-                t += colors[i];
-                t += " ";
-            }
-            return t;*/
-            for (int i = 0; i < n; i++)
-            {
                 Vertices[i].color = colors[i];
-            }
         }
     }
 }

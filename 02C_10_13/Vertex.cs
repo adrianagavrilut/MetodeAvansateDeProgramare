@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace _02C_10_13
 {
@@ -30,6 +25,5 @@ namespace _02C_10_13
             h.DrawEllipse(Pens.Black, location.X - 5, location.Y - 5, 11, 11);
             h.DrawString(name, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.Blue), location.X, location.Y);
         }
-
     }
 }
